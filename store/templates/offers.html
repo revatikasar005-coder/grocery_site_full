@@ -1,0 +1,18 @@
+{% load static %}  <!-- This should be at the very top -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offers - Grocery Delight</title>
+</head>
+<body>
+  <img src="{% static 'images/your_image.jpg' %}" alt="Product Image">  <!-- Correct use of static tag -->
+
+  <h1>🎉 Special Offers</h1>
+  <p>Here are the best deals and discounts on groceries.</p>
+  <a href="{% url 'home' %}">⬅ Back to Home</a>
+</body>
+</html>
+

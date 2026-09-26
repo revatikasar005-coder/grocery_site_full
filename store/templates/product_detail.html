@@ -1,0 +1,20 @@
+{% load static %}
+{% extends 'store/base.html' %}
+
+{% block title %}{{ product.name }} - Grocery Delight{% endblock %}
+
+{% block content %}
+<div class="product-detail">
+    <!-- Static image added here -->
+    <img src="{% static 'images/your_image.jpg' %}" alt="Product Image">
+
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <h2>{{ product.name }}</h2>
+    <p>Price: ₹{{ product.price }}</p>
+    {% if product.discount %}
+        <p class="offer">Offer: {{ product.discount }}% OFF</p>
+    {% endif %}
+    <a href="{% url 'add_to_cart' product.pk %}" class="btn-cart">Add to Cart</a>
+    <a href="{% url 'toggle_favourite' product.pk %}" class="btn-fav"><i class="fa fa-heart"></i></a>
+</div>
+{% endblock %}

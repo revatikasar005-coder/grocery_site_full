@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Grocery Delight{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- Hero & Navbar will be in child templates -->
+
+  {% block content %}
+    <div class="image-section">
+      <!-- Removed the second {% load static %} here -->
+      <img src="{% static 'images/your_image.jpg' %}" alt="Product Image">
+    </div>
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <p>Email: team_rra595@gmail.com</p>
+    </div>
+    <div class="footer-box">
+      <h3>Why Us?</h3>
+      <p>Fresh groceries at your doorstep. Affordable prices, variety, fast delivery!</p>
+    </div>
+    <div class="footer-box">
+      <h3>Help</h3>
+      <p>FAQ | Support | Terms</p>
+    </div>
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="socials">
+        <img src="{% static 'images/fb.png' %}" alt="Facebook">
+        <img src="{% static 'images/insta.png' %}" alt="Instagram">
+        <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

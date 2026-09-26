@@ -1,0 +1,23 @@
+@"
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+db.sqlite3
+*.sqlite3
+
+Documents/
+
+# OS files
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+"@ | Set-Content .gitignore

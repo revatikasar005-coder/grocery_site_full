@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grocery Delight</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+    header {
+      background-image: url("images/header_bg.jpg");
+      background-size: cover;
+      padding: 40px;
+      text-align: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .product-card p {
+      margin: 4px 0;
+      font-weight: bold;
+    }
+    .offer {
+      background: crimson;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    .product-card button {
+      margin: 8px 4px 0;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: #4CAF50;
+      color: white;
+    }
+    .fav-btn {
+      background-color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+<header>Grocery Delight</header>
+
+<section class="product-grid">
+
+  <!-- Sample product cards (repeat for all products) -->
+  <div class="product-card">
+    <img src="images/Apples.jpg" alt="Apples">
+    <h3>Apples</h3>
+    <p>₹120/kg</p>
+    <span class="offer">10% OFF</span><br>
+    <button>Buy Now</button>
+    <button class="fav-btn">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Beverages.jpg" alt="Beverages">
+    <h3>Beverages</h3>
+    <p>₹45</p>
+    <button>Buy Now</button>
+    <button class="fav-btn">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Biscuits.jpg" alt="Biscuits">
+    <h3>Biscuits</h3>
+    <p>₹25</p>
+    <span class="offer">Buy 1 Get 1</span><br>
+    <button>Buy Now</button>
+    <button class="fav-btn">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Bournvita.jpg" alt="Bournvita">
+    <h3>Bournvita</h3>
+    <p>₹210</p>
+    <button>Buy Now</button>
+    <button class="fav-btn">Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/Bread.jpg" alt="Bread">
+    <h3>Bread</h3>
+    <p>₹30</p>
+    <span class="offer">5% OFF</span><br>
+    <button>Buy Now</button>
+    <button class="fav-btn">Add to Cart</button>
+  </div>
+   <!-- Dry Fruits -->
+<div class="product-card">
+  <img src="images/DryFruits.jpg" alt="Dry Fruits">
+  <h3>Dry Fruits</h3>
+  <p>₹220</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Facewashes -->
+<div class="product-card">
+  <img src="images/Facewashes.jpg" alt="Facewashes">
+  <h3>Facewashes</h3>
+  <p>₹130</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Fresheners & Repellents -->
+<div class="product-card">
+  <img src="images/Fresheners & Repellents.jpg" alt="Fresheners & Repellents">
+  <h3>Fresheners & Repellents</h3>
+  <p>₹110</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Ghee -->
+<div class="product-card">
+  <img src="images/Ghee.jpg" alt="Ghee">
+  <h3>Ghee</h3>
+  <p>₹340</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Home & Kitchen Appliances -->
+<div class="product-card">
+  <img src="images/Home & kitchen appliances.jpg" alt="Home & Kitchen Appliances">
+  <h3>Home & Kitchen Appliances</h3>
+  <p>₹750</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Ice Cream -->
+<div class="product-card">
+  <img src="images/Icecream.jpg" alt="Ice Cream">
+  <h3>Ice Cream</h3>
+  <p>₹120</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Kellogg's -->
+<div class="product-card">
+  <img src="images/Kellogg.jpg" alt="Kellogg's">
+  <h3>Kellogg's</h3>
+  <p>₹130</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Kissan Sauces -->
+<div class="product-card">
+  <img src="images/Kissan Sauces.jpg" alt="Kissan Sauces">
+  <h3>Kissan Sauces</h3>
+  <p>₹90</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Lipton Green Tea -->
+<div class="product-card">
+  <img src="images/Lipton GreenTea.jpg" alt="Lipton Green Tea">
+  <h3>Lipton Green Tea</h3>
+  <p>₹180</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Milk -->
+<div class="product-card">
+  <img src="images/Milk.jpg" alt="Milk">
+  <h3>Milk</h3>
+  <p>₹60</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Moisturizers -->
+<div class="product-card">
+  <img src="images/Moisturizers.jpg" alt="Moisturizers">
+  <h3>Moisturizers</h3>
+  <p>₹140</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Oats -->
+<div class="product-card">
+  <img src="images/Oats.jpg" alt="Oats">
+  <h3>Oats</h3>
+  <p>₹100</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Peanuts -->
+<div class="product-card">
+  <img src="images/Peanuts.jpg" alt="Peanuts">
+  <h3>Peanuts</h3>
+  <p>₹70</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Salt -->
+<div class="product-card">
+  <img src="images/Salt.jpg" alt="Salt">
+  <h3>Salt</h3>
+  <p>₹20</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Semolina -->
+<div class="product-card">
+  <img src="images/Semolina.jpg" alt="Semolina">
+  <h3>Semolina</h3>
+  <p>₹45</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Shampoo's -->
+<div class="product-card">
+  <img src="images/Shampoo's.jpg" alt="Shampoos">
+  <h3>Shampoos</h3>
+  <p>₹150</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Soap -->
+<div class="product-card">
+  <img src="images/Soap.jpg" alt="Soap">
+  <h3>Soap</h3>
+  <p>₹30</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Sugar -->
+<div class="product-card">
+  <img src="images/Sugar.jpg" alt="Sugar">
+  <h3>Sugar</h3>
+  <p>₹40</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Tea Powder -->
+<div class="product-card">
+  <img src="images/Teapowder.jpg" alt="Tea Powder">
+  <h3>Tea Powder</h3>
+  <p>₹95</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Tomatoes -->
+<div class="product-card">
+  <img src="images/Tomatoes.jpg" alt="Tomatoes">
+  <h3>Tomatoes</h3>
+  <p>₹35</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+<!-- Wheat -->
+<div class="product-card">
+  <img src="images/wheat.jpg" alt="Wheat">
+  <h3>Wheat</h3>
+  <p>₹50</p>
+  <button>Buy Now</button>
+  <button class="fav-btn">🤍</button>
+</div>
+
+
+  <!-- Add the rest of the products below similarly -->
+
+  <div class="product-card"><img src="images/Cadbury Celebrations.jpg" alt="Cadbury Celebrations"><h3>Cadbury Celebrations</h3><p>₹150</p><span class="offer">Special Pack</span><br><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Chai Time Snacks.jpg" alt="Chai Time Snacks"><h3>Chai Time Snacks</h3><p>₹70</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Chocolates.jpg" alt="Chocolates"><h3>Chocolates</h3><p>₹99</p><span class="offer">15% OFF</span><br><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Cleaning Essentials.jpg" alt="Cleaning Essentials"><h3>Cleaning Essentials</h3><p>₹85</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Coffee.jpg" alt="Coffee"><h3>Coffee</h3><p>₹140</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Curd.jpg" alt="Curd"><h3>Curd</h3><p>₹25</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/dal-pulses.jpg" alt="Dal & Pulses"><h3>Dal & Pulses</h3><p>₹90/kg</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Detergents & Fabric Care.jpg" alt="Detergents"><h3>Detergents</h3><p>₹180</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/DryFruits.jpg" alt="Dry Fruits"><h3>Dry Fruits</h3><p>₹300</p><span class="offer">Flat ₹50 OFF</span><br><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Facewashes.jpg" alt="Facewashes"><h3>Facewashes</h3><p>₹90</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Fresheners & Repellents.jpg" alt="Fresheners"><h3>Fresheners</h3><p>₹110</p><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+  <div class="product-card"><img src="images/Ghee.jpg" alt="Ghee"><h3>Ghee</h3><p>₹450</p><span class="offer">5% Cashback</span><br><button>Buy Now</button><button class="fav-btn">Add to Cart</button></div>
+
+
+  <!-- Continue for remaining images: Icecream, Kellogg, Kissan Sauces, Kurkure, Lipton GreenTea, Milk, Moisturizers, Namkeens, Nestle Maggie, Oats, Oils, Pasta, Peanuts, Rice, Salt, Semolina, Shampoo's, Soap, Spices-Masalas, Sugar, Teapowder, Tomatoes, Wheat -->
+
+</section>
+
+</body>
+</html>

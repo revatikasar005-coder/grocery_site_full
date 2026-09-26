@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Grocery World</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* 🔹 Slideshow Background */
+    .slideshow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .slideshow img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+    }
+
+    /* 🔹 Dark Overlay */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+
+    /* 🔹 Welcome Content */
+    .welcome-container {
+      position: relative;
+      z-index: 1;
+      padding: 40px 60px;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 35px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #28a745, #218838);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-size: 22px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #1c7430, #145522);
+      transform: scale(1.07);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Slideshow Background -->
+  <div class="slideshow">
+    <img src="{% static 'images/bg.jpg' %}" class="active" alt="Background 1">
+    
+  </div>
+
+  <!-- 🔹 Dark overlay -->
+  <div class="overlay"></div>
+
+  <!-- 🔹 Welcome Content -->
+  <div class="welcome-container">
+    <h1>Welcome to Grocery World!! 🛒</h1>
+    <p>Your Freshness Partner – Everyday, Everywhere</p>
+    <a href="{% url 'login' %}" class="btn">Get Started</a>
+  </div>
+
+  <!-- 🔹 Slideshow Script -->
+  <script>
+    const images = document.querySelectorAll('.slideshow img');
+    let index = 0;
+
+    function showNextImage() {
+      images[index].classList.remove('active');
+      index++;
+
+      // agar last image aa gayi toh wahi fix ho jaaye
+      if (index >= images.length) {
+        index = images.length - 1;
+        images[index].classList.add('active');
+        clearInterval(slideShow);
+        return;
+      }
+
+      images[index].classList.add('active');
+    }
+
+    const slideShow = setInterval(showNextImage, 4000); // har 4 sec me change hoga
+  </script>
+</body>
+</html>
